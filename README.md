@@ -23,7 +23,7 @@ O projeto está estruturado em três laboratórios progressivos:
 * `lab01/`: Contém os ficheiros da aplicação web (`plataforma/`) e o `Dockerfile` para a construção personalizada da imagem do servidor web com a extensão `mysqli`. Cobre a criação manual de redes e contentores (`docker run`).
 * `lab02/`: Contém o ficheiro `docker-compose.yml` responsável pela orquestração declarativa. Permite iniciar a base de dados, a rede virtual e a aplicação web de forma simultânea com um único comando.
 * `lab03/`: Contém os manifestos YAML do Kubernetes (`app-deployment`, `app-service`, `mysql-deployment`, `mysql-service`) para o lançamento da infraestrutura com múltiplas réplicas, balanceamento de carga e alta disponibilidade através do Minikube.
-* `.github/`: Pasta dedicada ao armazenamento das evidências (capturas de ecrã) exigidas em cada etapa da avaliação, comprovando a execução e o funcionamento de todos os passos.
+* `.github/`: Pasta dedicada ao armazenamento das evidências (capturas de ecrã), comprovando a execução e o funcionamento de todos os passos.
 
 ## 🚀 Como Executar
 
