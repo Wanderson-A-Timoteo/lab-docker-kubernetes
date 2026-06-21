@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: app001
+
+spec:
+  replicas: 3
+
+  selector:
+    matchLabels:
+      app: app001
+
+  template:
+    metadata:
+      labels:
+        app: app001
+
+    spec:
+      containers:
+      - name: app001
+
+        image: php-plataforma:v1
+
+        imagePullPolicy: Never
+
+        ports:
+        - containerPort: 80
