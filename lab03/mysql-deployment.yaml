@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: db001
+
+spec:
+  replicas: 2
+
+  selector:
+    matchLabels:
+      app: db001
+
+  template:
+    metadata:
+      labels:
+        app: db001
+
+    spec:
+      containers:
+      - name: mysql
+
+        image: mysql:9.7
+
+        env:
+        - name: MYSQL_ROOT_PASSWORD
+          value: "123456"
+
+        ports:
+        - containerPort: 3306
