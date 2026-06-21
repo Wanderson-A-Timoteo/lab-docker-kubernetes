@@ -1,4 +1,4 @@
-# Laboratório de Docker e Kubernetes - Avaliação 3
+# Laboratório de Docker e Kubernetes
 
 Este repositório contém a resolução prática e documentada da infraestrutura/DevOps.
 
