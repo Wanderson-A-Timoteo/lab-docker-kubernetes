@@ -1,0 +1,25 @@
+services:
+  db001:
+    image: mysql:9.7
+    container_name: db001
+    environment:
+      MYSQL_ROOT_PASSWORD: 123456
+    volumes:
+      - ./cadastro-temp.sql:/docker-entrypoint-initdb.d/cadastro-temp.sql
+    networks:
+      - rede-lab-teste-devops
+
+  app001:
+    build: .
+    container_name: app001
+    ports:
+      - "80:80"
+    volumes:
+      - ./plataforma:/var/www/html/plataforma
+    depends_on:
+      - db001
+    networks:
+      - rede-lab-teste-devops
+
+networks:
+  rede-lab-teste-devops:
